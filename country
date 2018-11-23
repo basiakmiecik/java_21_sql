@@ -1,0 +1,4 @@
+
+select* from world.country order by LifeExpectancy desc limit 3;
+select sum(population) As sumPopCountry from world.country where Continent='Europe';
+select* from world.country where IndepYear='1918';
