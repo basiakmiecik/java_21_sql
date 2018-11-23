@@ -1,0 +1,15 @@
+select* from world.city where countryCode like 'Pol'; 
+select * from  world.city WHERE Population = (SELECT Max(Population) FROM world.city where countryCode like 'Pol');
+select sum(population) As sumPop from world.city where countryCode like 'Pol' 
+select* from world.city where countryCode like 'Pol';
+select * from  world.city WHERE Population = (SELECT Max(Population) FROM world.city where countryCode like 'Pol');
+select sum(population) As sumPop from world.city where countryCode like 'Pol';
+update world.city set population='1000000' where name='Warszawa' ;
+select* from world.city where Name='Warszawa';
+insert into world.city set name='Ostrów Wlkp', countryCode='POL', District='Wielkopolskie', population='72360';
+insert into world.city set name='Milicz', countryCode='POL', District='Dolnoslaskie', population='11552';
+insert into world.city set name='Lowicz', countryCode='POL', District='Lodzkie', population='28811';
+Delete from world.city where name='Gdansk';
+select* from world.city where countryCode like 'Pol' order by Population desc limit 5;
+select* from world.city where District like 'Slaskie' and  Population>150000 order by Population limit 3;
+
